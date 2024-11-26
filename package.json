@@ -14,7 +14,8 @@
     "test": "turbo test",
     "analyze": "turbo analyze",
     "bump-deps": "npx npm-check-updates --deep -u -x react-day-picker && pnpm install",
-    "migrate": "cd packages/database && npx prisma format && npx prisma generate && npx prisma db push"
+    "migrate": "cd packages/database && npx prisma format && npx prisma generate && npx prisma db push",
+    "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "^11.3.0",
@@ -26,7 +27,10 @@
     "ultracite": "^4.1.6"
   },
   "engines": {
-    "node": ">=18"
+    "yarn": "please-use-pnpm",
+    "npm": "please-use-pnpm",
+    "node": ">=18.18.0",
+    "pnpm": ">=9"
   },
   "packageManager": "pnpm@9.13.2"
 }
